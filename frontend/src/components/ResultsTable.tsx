@@ -1,4 +1,16 @@
-const ResultsTable = ({ results }) => {
+interface GematriaResult {
+  gematriaValue: number;
+  word: string;
+  book: string;
+  chapter: number;
+  verse: number;
+}
+
+interface ResultsTableProps {
+  results: GematriaResult[];
+}
+
+const ResultsTable = ({ results }: ResultsTableProps) => {
   if (results.length === 0) return null;
 
   return (

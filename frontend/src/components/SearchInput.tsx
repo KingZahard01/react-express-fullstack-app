@@ -1,4 +1,16 @@
-const SearchInput = ({ value, onChange, onSearch, loading }) => {
+interface SearchInputProps {
+  value: string;
+  onChange: (value: string) => void;
+  onSearch: () => void;
+  loading: boolean;
+}
+
+const SearchInput = ({
+  value,
+  onChange,
+  onSearch,
+  loading,
+}: SearchInputProps) => {
   return (
     <div className="search-input-container">
       <input
@@ -6,7 +18,7 @@ const SearchInput = ({ value, onChange, onSearch, loading }) => {
         value={value}
         onChange={(e) => onChange(e.target.value)}
         placeholder="Ingresa un valor numérico"
-        aria-label="Valore numérico"
+        aria-label="Valor numérico"
         className="search-input"
       />
       <button
@@ -15,7 +27,7 @@ const SearchInput = ({ value, onChange, onSearch, loading }) => {
         aria-label="Buscar gematria"
         className="search-button"
       >
-        {loading ? "Buscando..." : "Buscar"}
+        {loading ? 'Buscando...' : 'Buscar'}
       </button>
     </div>
   );
