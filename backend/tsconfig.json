@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    /* TARGET MODERNO */
+    "target": "ES2022",
+    "lib": ["ES2022"],
+
+    /* COMMONJS CLÁSICO */
+    "module": "CommonJS",
+    // "moduleResolution": "Node",
+
+    /* RUTAS DE BUILD */
+    "outDir": "dist",
+    "rootDir": "src",
+
+    /* INTEROP */
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+
+    /* TIPADO ESTRICTO */
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+
+    /* MISC */
+    "noFallthroughCasesInSwitch": true
+
+    /* SILENCIAR DEPRECACIONES DE NODE RESOLUTION */
+    // "ignoreDeprecations": "6.0"
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
+}
